@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "header-sentinel"
+version = "1.0.0"
+description = "Audit a website's HTTP security headers and grade them A-F."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "Davide Alovisio" }]
+keywords = ["security", "http-headers", "csp", "hsts", "web-security", "audit", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+    "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/DavideAlovisio13/header-sentinel"
+
+[project.scripts]
+header-sentinel = "headersentinel.__main__:main"
+
+[tool.setuptools]
+packages = ["headersentinel"]
